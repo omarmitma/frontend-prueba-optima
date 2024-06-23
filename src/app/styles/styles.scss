@@ -1,0 +1,21 @@
+/* 0-base */
+@import '0-base/base-dir';
+
+/* 3-helpers */
+@import '3-helpers/helpers-dir';
+
+/* 2-modules */
+@import '2-modules/modules-dir';
+
+/* 1-pages */
+@import '1-pages/pages-dir';
+
+@import "primeicons/primeicons.css";
+body{
+  margin: 0;
+}
+
+button,a{
+  cursor: pointer;
+  transition: .4s all;
+}

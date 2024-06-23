@@ -1,0 +1,27 @@
+<div class="wrapCreditos">
+    <div class="titleMain">
+        <h2>CREDITOS</h2>
+    </div>
+    <div class="filter">
+        <span class="p-input-icon-left">
+            <i class="pi pi-search"></i>
+            <input type="text" pInputText [(ngModel)]="textFilter" />
+        </span>
+        <span class="p-float-label">
+            <p-calendar [(ngModel)]="date1" [showIcon]="true" dateFormat="dd/mm/yy"></p-calendar>
+            <label htmlFor="username">Fecha inicio</label>
+        </span>
+        <span class="p-float-label">
+            <p-calendar [(ngModel)]="date2" [showIcon]="true" dateFormat="dd/mm/yy"></p-calendar>
+            <label htmlFor="username">Fecha inicio</label>
+        </span>
+        <div class="button">
+            <p-button label="Buscar" (onClick)="filterData()" severity="info"></p-button>
+        </div>
+    </div>
+    <div class="data">
+        <app-table-main 
+        [dataMain]="dataCreditoFilter" [tableHeaders]="tableHeaders" [viewSelect]="true"
+        (eventSelectTable)="eventSelectTable($event)"></app-table-main>
+    </div>
+</div>

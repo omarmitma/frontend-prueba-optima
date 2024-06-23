@@ -1,0 +1,30 @@
+<div class="wrapCuota">
+    <div class="titleMain">
+        <h2><button [routerLink]="['/home/creditos']">CREDITOS</button> / CUOTAS</h2>
+    </div>
+    <div class="dataCredito">
+        <span class="p-float-label">
+            <input pInputText id="cliente" [disabled]="true" [(ngModel)]="creditoNow.persona.nombre" />
+            <label htmlFor="cliente">Cliente</label>
+        </span>
+        <span class="p-float-label">
+            <input pInputText id="proyecto" [disabled]="true" [(ngModel)]="creditoNow.proyecto.nombre" />
+            <label htmlFor="proyecto">Proyecto</label>
+        </span>
+        <span class="p-float-label">
+            <input pInputText id="montoTotal" [disabled]="true" [(ngModel)]="creditoNow.montoTotal" />
+            <label htmlFor="montoTotal">Monto Total</label>
+        </span>
+        <div class="button">
+            <p-button label="Guardar" (onClick)="openAlertConfirm()" severity="info"></p-button>
+        </div>
+    </div>
+    <div class="data">
+        <app-table-main [viewVouchers]="true"
+        [dataMain]="dataCuota" [tableHeaders]="tableHeaders"></app-table-main>
+    </div>
+</div>
+
+<!-- alertas -->
+<p-toast position="bottom-center" key="bc"></p-toast>
+<app-alert-confirm [visible]="visibleAlert" (eventConfirmAlert)="eventConfirmAlert($event)"></app-alert-confirm>

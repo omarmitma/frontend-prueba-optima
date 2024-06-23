@@ -1,0 +1,30 @@
+@import 'header';
+@import 'footer';
+@import 'creditos';
+@import 'cuotas';
+
+main{
+    min-height: $main-mobile-height;
+    padding: 10px;
+}
+
+.titleMain{
+    h2{
+        font-size: 20px;
+        font-weight: bold;
+        color: $font-color-title-main;
+        button{
+            border: none;
+            background-color: transparent;
+            font-size: 20px;
+            font-weight: bold;
+            color: $font-color-title-main;
+            border-bottom: 1px solid $font-color-title-main;
+            padding: 0;
+            &:hover{
+                color: rgba($color: $font-color-title-main, $alpha: 0.3);
+                border-bottom: 1px solid rgba($color: $font-color-title-main, $alpha: 0.3);
+            }
+        }
+    }
+}

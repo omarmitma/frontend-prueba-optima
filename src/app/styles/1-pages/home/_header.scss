@@ -1,0 +1,13 @@
+.wrapHeader{
+    height: $header-mobile-height;
+    background-color: $bg-header;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    .title{
+        h1{
+            font-size: 25px;
+            color: $font-color-header;
+        }
+    }
+}

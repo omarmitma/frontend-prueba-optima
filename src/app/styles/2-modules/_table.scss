@@ -1,0 +1,60 @@
+.tdContentDetalleVoucher{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+.detalleVoucher{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    border: 2px solid $border-voucher-table;
+    width: max-content;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    .detalle{
+        border-right: 2px solid $border-voucher-table;
+        padding: 5px;
+        input{
+            width: 150px;
+        }
+    }
+    .detalleArchivo{
+        border-right: none;
+    }
+    .detalleArchivo2{
+        a{
+            text-decoration: none;
+            display: inline-block;  /* o block dependiendo de tu diseño */
+            width: 100px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            vertical-align: middle; /* alineación vertical opcional */
+        }
+        button{
+            background-color: transparent;
+            border: 2px solid $border-voucher-table;
+            font-size: 16px;
+            height: 25px;
+            width: 25px;
+            border-radius: 5px;
+            margin-left: 5px;
+            &:hover{
+                border: 2px solid $red;
+                background-color: rgba($color: $red, $alpha: 0.8);
+                color: $white;
+            }
+        }
+    }
+}
+
+.inputDatePersonalizado{
+    padding: 0.75rem 0.75rem;   
+    font-family: "Inter var", sans-serif;
+    font-size: 1rem;
+    color: #495057;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+}
